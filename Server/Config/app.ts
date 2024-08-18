@@ -41,7 +41,7 @@ mongoose.connection.on('connected', () => {
 
 
 import indexRouter from '../Routes/index';
-import movieRouter from '../Routes/movie';
+import famousPeopleRouter from '../Routes/famous-people';
 
 import { dot } from 'node:test/reporters';
 
@@ -106,8 +106,7 @@ passport.use(strategy);
 
 app.use('/api', indexRouter);
 /* Example: Secure the movie routes with JWT authentication */
-app.use('/api/movie', passport.authenticate('jwt', {session: false}), movieRouter);
-// app.use('/api/movie', movieRouter);
+app.use('/api/famousPeople', passport.authenticate('jwt', {session: false}), famousPeopleRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
