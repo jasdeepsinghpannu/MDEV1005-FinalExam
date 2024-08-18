@@ -17,15 +17,15 @@ export interface IFamousPeople {
 
 // Famous People Schema - defines the structure of a famous people document
 const famousPeopleSchema = new Schema<IFamousPeople>({
-    famousPersonID: { type: String, required: true },
-    name: { type: String, required: true },
-    occupation: { type: String, required: true },
-    nationality: { type: String, required: true },
-    birthDate: { type: Date, required: true },
-    birthPlace: { type: String, required: true },
-    bio: { type: String, required: true },
-    achievements: { type: [String], required: true },
-    imageURL: { type: String, required: true }
+    famousPersonID: { type: String },
+    name: { type: String},
+    occupation: { type: String},
+    nationality: { type: String},
+    birthDate: { type: Date},
+    birthPlace: { type: String},
+    bio: { type: String},
+    achievements: { type: [String]},
+    imageURL: { type: String}
 });
 
 const FamousPeople = model<IFamousPeople>('FamousPeople', famousPeopleSchema);

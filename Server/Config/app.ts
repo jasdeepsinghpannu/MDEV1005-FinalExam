@@ -105,7 +105,7 @@ let strategy = new JWTStrategy(jwtOptions, (jwt_payload, done) =>
 passport.use(strategy);
 
 app.use('/api', indexRouter);
-/* Example: Secure the movie routes with JWT authentication */
+/* Example: Secure the famousPeople routes with JWT authentication */
 app.use('/api/famousPeople', passport.authenticate('jwt', {session: false}), famousPeopleRouter);
 
 // catch 404 and forward to error handler
